@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <h1>
+            All Members
+        </h1>
+        <table>
+            <colgroup>
+              <col span="2" style="background-color:azure">
+              <col style="background-color:azure">
+            </colgroup>
+            <tr style="background-color:aquamarine;">
+              <th>FirstName</th>
+              <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>
+                    {% for x in myusers %}
+                        <li><a href="/details/{{x.id}}"> {{x.firstname}} </a></li>
+                    {% endfor %}</td>
+                <td>
+                    {% for x in myusers %}
+                        <li> {{x.lastname}} </li>
+                     {% endfor %}</td>
+              </tr>
+        </table>
+    </body>
+</html>
